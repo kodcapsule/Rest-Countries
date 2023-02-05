@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { BiChevronDown } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
 
@@ -5,9 +7,11 @@ import "./country.css";
 import Country from "./Country";
 
 const Countrycontainer = () => {
+  const [hideregion, sethHideregion] = useState(false);
   const handlelistdisplay = (e) => {
+    sethHideregion(!hideregion);
     e.preventDefault();
-    console.log(e);
+    console.log(hideregion);
   };
   return (
     <main className="container">
