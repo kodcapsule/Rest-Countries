@@ -1,8 +1,12 @@
+import Navbar from "./components/navbar/Navbar";
+import Countrycontainer from "./components/country/Countrycontainer";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
+    <>
+      <Navbar />
+      <Countrycontainer />
+    </>
   );
 }
 

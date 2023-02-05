@@ -1,13 +1,44 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue: hsl(207, 26%, 17%);
+  --very-dark-blue: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  /* ========== Transitions ============ */
+  --transition-primary: all 300ms eas-in-out;
+  --transition-sec: all 500ms eas-in-out;
+
+  /* ========== BORDER RAIUS ============ */
+  --border-raduis-sm: 0.5rem;
+  --border-raduis-m: 1rem;
+  --border-raduis-l: 2rem;
+  --border-raduis-circle: 50%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.4rem;
+  color: var(--very-dark-blue);
+  background: var(--very-light-gray);
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
 }

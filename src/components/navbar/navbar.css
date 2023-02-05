@@ -1,0 +1,32 @@
+header {
+  width: 100vw;
+  background: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  z-index: 100;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+
+.navbar__container h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.navbar__container p {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  text-transform: capitalize;
+  color: var(--very-dark-blue);
+}

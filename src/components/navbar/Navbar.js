@@ -1,7 +1,21 @@
+import { BsMoon } from "react-icons/bs";
+
 import "./navbar.css";
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <header>
+      <nav className="container navbar">
+        <div className="navbar__container">
+          <h1>where in the world?</h1>
+          <p>
+            <BsMoon />
+            <span>Dark mode</span>
+          </p>
+        </div>
+      </nav>
+    </header>
+  );
 };
 
 export default Navbar;
