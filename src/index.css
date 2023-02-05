@@ -26,6 +26,9 @@
   --border-raduis-m: 1rem;
   --border-raduis-l: 2rem;
   --border-raduis-circle: 50%;
+
+  /* ========== BOX SHADOWS ============ */
+  --primary-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 html {
@@ -37,9 +40,28 @@ body {
   font-size: 1.4rem;
   color: var(--very-dark-blue);
   background: var(--very-light-gray);
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 144rem;
   margin: 0 auto;
+}
+
+.grid__container {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid__cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid__cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid__cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid__cols-5 {
+  grid-template-columns: repeat(5, 1fr);
 }

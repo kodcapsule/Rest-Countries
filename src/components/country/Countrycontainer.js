@@ -5,6 +5,7 @@ import { BsSearch } from "react-icons/bs";
 
 import "./country.css";
 import Country from "./Country";
+import Region from "./Region";
 
 const Countrycontainer = () => {
   const [hideregion, sethHideregion] = useState(false);
@@ -26,15 +27,19 @@ const Countrycontainer = () => {
         </div>
 
         <ul className="list__items hide">
-          <li className="region">Africa</li>
-          <li className="region">America</li>
-          <li className="region">Asia</li>
-          <li className="region">Europe</li>
-          <li className="region">Oceania</li>
+          <Region region="Africa" />
+          <Region region="America" />
+          <Region region="Asia" />
+          <Region region="Europe" />
+          <Region region="Oceania" />
         </ul>
       </div>
 
-      <div className="content">
+      <div className="main__content grid__container grid__cols-4">
+        <Country />
+        <Country />
+        <Country />
+        <Country />
         <Country />
       </div>
     </main>
