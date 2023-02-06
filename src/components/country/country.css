@@ -48,7 +48,6 @@
   top: 19%;
   right: 3%;
   align-items: flex-start;
-  /* padding-right: 3rem; */
 }
 
 .region {
@@ -72,11 +71,14 @@
 /* country component */
 
 .country {
-  width: fit-content;
-  overflow: hidden;
   background: var(--white);
   border-radius: var(--border-raduis-sm);
   box-shadow: var(--primary-box-shadow);
+}
+
+.flag__container {
+  overflow: hidden;
+  border-radius: var(--border-raduis-sm);
 }
 
 .flag__container img {
@@ -92,7 +94,7 @@
 }
 
 .country__details p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
@@ -100,5 +102,6 @@
   color: var(--dark-gray);
 }
 .main__content {
-  gap: 5rem;
+  gap: 8rem;
+  height: 100vh;
 }

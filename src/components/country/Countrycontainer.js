@@ -41,6 +41,14 @@ const Countrycontainer = () => {
         <Country />
         <Country />
         <Country />
+        <Country />
+        <Country />
+        <Country />
+        <Country />
+        <Country />
+        <Country />
+        <Country />
+        <Country />
       </div>
     </main>
   );

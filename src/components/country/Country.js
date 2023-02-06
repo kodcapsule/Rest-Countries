@@ -4,7 +4,7 @@ const Country = () => {
   return (
     <article className="country">
       <div className="flag__container">
-        <img src="https://flagcdn.com/ao.svg" alt="" />
+        <img src="https://flagcdn.com/gh.svg" alt="" />
       </div>
       <div className="country__details">
         <h4>NAME</h4>
