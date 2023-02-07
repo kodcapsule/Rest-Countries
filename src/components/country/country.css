@@ -7,7 +7,8 @@
 
 .dropdown__list,
 .serach__input,
-.list__items {
+.list__items,
+.back {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -104,4 +105,23 @@
 .main__content {
   gap: 8rem;
   height: 100vh;
+}
+
+/* Country Details */
+
+.country_details {
+  padding: 4rem 0;
+}
+
+.back {
+  width: fit-content;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  color: black;
+}
+
+.back .icon {
+  font-size: 2.5rem;
 }

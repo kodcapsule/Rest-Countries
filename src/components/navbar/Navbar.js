@@ -7,7 +7,7 @@ const Navbar = () => {
     <header>
       <nav className="container navbar">
         <div className="navbar__container">
-          <h1>where in the world?</h1>
+          <h1>Where in the world?</h1>
           <p>
             <BsMoon />
             <span>Dark mode</span>
