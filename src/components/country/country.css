@@ -125,3 +125,36 @@
 .back .icon {
   font-size: 2.5rem;
 }
+
+.country_detail {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.country_detail .flag__container {
+  width: 35%;
+  border-radius: 0rem;
+}
+
+.country__detail_content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-left: 10rem;
+  background: blue;
+  padding: 1rem;
+}
+
+.country__detail_content h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.content {
+  column-gap: 20rem;
+}
+
+.border__countries {
+  margin-top: 6rem;
+}
