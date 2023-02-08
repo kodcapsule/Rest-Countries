@@ -21,11 +21,11 @@
   --transition-primary: all 300ms eas-in-out;
   --transition-sec: all 500ms eas-in-out;
 
-  /* ========== BORDER RAIUS ============ */
-  --border-raduis-sm: 0.5rem;
-  --border-raduis-m: 1rem;
-  --border-raduis-l: 2rem;
-  --border-raduis-circle: 50%;
+  /* ========== BORDER RADIUS ============ */
+  --border-radius-sm: 0.5rem;
+  --border-radius-m: 1rem;
+  --border-radius-l: 2rem;
+  --border-radius-circle: 50%;
 
   /* ========== BOX SHADOWS ============ */
   --primary-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

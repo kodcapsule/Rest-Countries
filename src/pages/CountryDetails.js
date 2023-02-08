@@ -14,13 +14,13 @@ const CountryDetails = () => {
 
       <article className="country_detail">
         <div className="flag__container">
-          <img src="https://flagcdn.com/gh.svg" alt="" />
+          <img src="https://flagcdn.com/gh.svg" alt="country flag" />
         </div>
         <div className="country__detail_content">
           <h2>ghana</h2>
           <div className="content grid__container grid__cols-2">
             <p>
-              Population : <span>Population No</span>
+              Population : <span>100,000,000</span>
             </p>
             <p>
               Region : <span>Region Name</span>
@@ -42,9 +42,13 @@ const CountryDetails = () => {
             </p>
           </div>
           <div className="border__countries">
-            <p>
-              Border countries : <span>City</span>
-            </p>
+            <span> Border countries:</span>
+
+            <ul>
+              <li>Togo</li>
+              <li>Togo</li>
+              <li>Togo</li>
+            </ul>
           </div>
         </div>
       </article>

@@ -8,22 +8,22 @@ import Country from "./Country";
 import Region from "./Region";
 
 const Countrycontainer = () => {
-  const [hideregion, sethHideregion] = useState(false);
-  const handlelistdisplay = (e) => {
-    sethHideregion(!hideregion);
+  const [hide_region, setHideRegion] = useState(false);
+  const handleListDisplay = (e) => {
+    setHideRegion(!hide_region);
     e.preventDefault();
-    console.log(hideregion);
+    console.log(hide_region);
   };
   return (
     <main className="container">
       <div className="top__container">
-        <div className="serach__input">
+        <div className="search__input">
           <BsSearch className="icon" />
-          <input type="searc" placeholder="Search for a country..." />
+          <input type="search" placeholder="Search for a country..." />
         </div>
         <div className="dropdown__list">
           <span>Filter by Region</span>
-          <BiChevronDown className="icon" onClick={handlelistdisplay} />
+          <BiChevronDown className="icon" onClick={handleListDisplay} />
         </div>
 
         <ul className="list__items hide">
