@@ -79,6 +79,7 @@ body {
 .list__items,
 .back,
 .border__countries ul li {
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -89,11 +90,23 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
 }
-/* @media screen and (max-width: 120rem) {
+
+.back {
+  padding: 1rem 3rem;
+}
+.back span {
+  color: var(--very-dark-blue) !important;
+}
+
+.back .icon {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 120rem) {
   html {
     font-size: 55.5%;
   }
-} */
+}
 
 @media screen and (max-width: 100rem) {
   html {

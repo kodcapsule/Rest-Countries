@@ -95,59 +95,38 @@
 
 /*================ End of country component ===================*/
 
-/* Country Details */
-
-.country_details {
-  padding: 4rem 0;
-}
-
-.back {
-  width: fit-content;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  gap: 0.5rem;
-  color: black;
-}
-
-.back .icon {
-  font-size: 2.5rem;
-}
+/*================ Start of Country Details ===================*/
 
 .country_detail {
   display: flex;
-  margin-top: 5rem;
+  margin-top: 8rem;
+  /* background: blue; */
 }
 
 .country_detail .flag__container {
-  width: 35%;
+  width: 48%;
   border-radius: 0rem;
 }
 
 .country__detail_content {
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 6rem;
   margin-left: 10rem;
-  /* background: blue; */
-  padding: 1rem;
 }
 
 .country__detail_content h2 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: capitalize;
-  margin-bottom: 2rem;
 }
 
 .content {
-  column-gap: 20rem;
-}
-
-.content p {
-  font-size: 1.5rem;
+  column-gap: 10rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--very-dark-blue);
+  margin-top: 2rem;
 }
 
 .content span {
@@ -156,7 +135,7 @@
 
 .border__countries {
   display: flex;
-  margin-top: 6rem;
+  margin-top: 8rem;
   align-items: center;
   gap: 2rem;
 }
@@ -175,3 +154,5 @@
 .border__countries ul li {
   padding: 0.5rem 3rem;
 }
+
+/*================ End of Country Details ===================*/
