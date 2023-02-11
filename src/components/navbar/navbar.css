@@ -22,12 +22,26 @@ header {
   color: var(--very-dark-blue);
 }
 
-.navbar__container p {
+.navbar__container button {
   display: flex;
   place-items: center;
   font-size: 2rem;
-  font-weight: 600;
-  gap: 1rem;
+  font-weight: 500;
   text-transform: capitalize;
   color: var(--very-dark-blue);
+}
+
+.navbar__container button:hover {
+  cursor: pointer;
+}
+
+.theme .light,
+.theme .dark {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme .light {
+  display: none;
 }
