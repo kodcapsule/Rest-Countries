@@ -19,6 +19,7 @@ header {
 .navbar__container h1 {
   font-size: 4rem;
   font-weight: 800;
+  color: var(--very-dark-blue);
 }
 
 .navbar__container p {

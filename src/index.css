@@ -10,7 +10,7 @@
 
 :root {
   --dark-blue: hsl(209, 23%, 22%);
-  --very-dark-blue: hsl(207, 26%, 17%);
+  --v-dark-blue: hsl(207, 26%, 17%);
   --very-dark-blue: hsl(200, 15%, 8%);
   --dark-gray: hsl(0, 0%, 52%);
   --light-gray: #e9ecef;
@@ -66,6 +66,29 @@ body {
   grid-template-columns: repeat(5, 1fr);
 }
 
+.icon {
+  font-size: 2rem;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.dropdown__list,
+.search__input,
+.list__items,
+.back,
+.border__countries ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  background: var(--white);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--primary-box-shadow);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
 /* @media screen and (max-width: 120rem) {
   html {
     font-size: 55.5%;
