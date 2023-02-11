@@ -17,16 +17,16 @@ header {
 }
 
 .navbar__container h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
 }
 
 .navbar__container p {
   display: flex;
-  align-items: center;
-  font-size: 1.5rem;
+  place-items: center;
+  font-size: 2rem;
   font-weight: 600;
-  gap: 0.5rem;
+  gap: 1rem;
   text-transform: capitalize;
   color: var(--very-dark-blue);
 }

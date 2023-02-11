@@ -46,7 +46,6 @@ body {
 .container {
   max-width: 144rem;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .grid__container {
@@ -65,4 +64,30 @@ body {
 }
 .grid__cols-5 {
   grid-template-columns: repeat(5, 1fr);
+}
+
+/* @media screen and (max-width: 120rem) {
+  html {
+    font-size: 55.5%;
+  }
+} */
+
+@media screen and (max-width: 100rem) {
+  html {
+    font-size: 45.5%;
+  }
+}
+
+@media screen and (max-width: 85rem) {
+  .main__content {
+    gap: 6rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 65rem) {
+  .main__content {
+    gap: 6rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
