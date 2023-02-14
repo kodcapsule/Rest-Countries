@@ -1,7 +1,8 @@
 import "./country.css";
 
 import { Link } from "react-router-dom";
-const Country = () => {
+const Country = ({ countryData }) => {
+  // console.log(countryData);
   return (
     <article className="country">
       <div className="flag__container">
