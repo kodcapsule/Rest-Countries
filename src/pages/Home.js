@@ -10,12 +10,6 @@ import Region from "../components/country/Region";
 const Home = () => {
   const [countries, setCountries] = useState({});
 
-  // const handleListDisplay = (e) => {
-  //   setHideRegion(!hide_region);
-  //   e.preventDefault();
-  //   console.log(hide_region);
-  // };
-
   useEffect(() => {
     getCountriesData();
   }, []);
@@ -24,7 +18,6 @@ const Home = () => {
     try {
       const data = await axios.get("https://restcountries.com/v3.1/all");
       setCountries(data.data);
-      // console.log(countries);
     } catch (error) {
       console.log(error.message);
     }

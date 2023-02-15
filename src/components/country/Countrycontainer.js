@@ -6,7 +6,11 @@ const Countrycontainer = ({ countries }) => {
   return (
     <main className="container">
       <div className="main__content grid__container grid__cols-4">
-        <Country countryData={countries[0]} />
+        {countries.map((country) => {
+          return <Country countryData={country} />;
+        })}
+
+        {/* <Country />
         <Country />
         <Country />
         <Country />
@@ -22,8 +26,7 @@ const Countrycontainer = ({ countries }) => {
         <Country />
         <Country />
         <Country />
-        <Country />
-        <Country />
+        <Country /> */}
       </div>
     </main>
   );
