@@ -14,7 +14,7 @@ const Country = ({ countryData }) => {
           <h3>{countryData.name.common}</h3>
         </Link>
         <p>
-          Population : <span>{countryData.population}</span>
+          Population : <span>{countryData.population.toLocaleString()}</span>
         </p>
         <p>
           Region : <span>{countryData.region}</span>

@@ -7,26 +7,8 @@ const Countrycontainer = ({ countries }) => {
     <main className="container">
       <div className="main__content grid__container grid__cols-4">
         {countries.map((country) => {
-          return <Country countryData={country} />;
+          return <Country countryData={country} key={country.name.common} />;
         })}
-
-        {/* <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country />
-        <Country /> */}
       </div>
     </main>
   );
