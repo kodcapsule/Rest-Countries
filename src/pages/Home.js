@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import ScaleLoader from "react-spinners/ScaleLoader";
 import Countrycontainer from "../components/country/Countrycontainer";
 
 import { BiChevronDown } from "react-icons/bi";
@@ -45,7 +45,13 @@ const Home = () => {
           <Region region="Oceania" />
         </ul>
       </div>
-      {isLoading && <h1 className="container loading">Loading...</h1>}
+      {isLoading && (
+        <ScaleLoader
+          color="hsl(207, 26%, 17%)"
+          size="200"
+          className="container loading"
+        />
+      )}
 
       {countries && <Countrycontainer countries={countries} />}
     </>
