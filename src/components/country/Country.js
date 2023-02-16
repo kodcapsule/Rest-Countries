@@ -6,7 +6,6 @@ const Country = ({ countryData }) => {
   return (
     <article className="country">
       <div className="flag__container">
-        {/* <img src="https://flagcdn.com/w320/bw.png" alt="" /> */}
         <img src={`${countryData.flags.png}`} alt="" />
       </div>
       <div className="country__content">

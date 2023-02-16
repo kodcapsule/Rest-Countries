@@ -8,7 +8,8 @@ import { BsSearch } from "react-icons/bs";
 import Region from "../components/country/Region";
 
 const Home = () => {
-  const [countries, setCountries] = useState({});
+  const [countries, setCountries] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getCountriesData();
@@ -18,6 +19,7 @@ const Home = () => {
     try {
       const data = await axios.get("https://restcountries.com/v3.1/all");
       setCountries(data.data);
+      setIsLoading(false);
     } catch (error) {
       console.log(error.message);
     }
@@ -43,7 +45,9 @@ const Home = () => {
           <Region region="Oceania" />
         </ul>
       </div>
-      <Countrycontainer countries={countries} />;
+      {isLoading && <h1 className="container loading">Loading...</h1>}
+
+      {countries && <Countrycontainer countries={countries} />}
     </>
   );
 };

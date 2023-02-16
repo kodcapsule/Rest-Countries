@@ -105,6 +105,10 @@ body {
   font-size: 3rem;
 }
 
+.loading {
+  text-align: center;
+  margin-top: 20rem;
+}
 @media screen and (max-width: 120rem) {
   html {
     font-size: 55.5%;

@@ -2,7 +2,6 @@ import "./country.css";
 import Country from "./Country";
 
 const Countrycontainer = ({ countries }) => {
-  console.log(countries);
   return (
     <main className="container">
       <div className="main__content grid__container grid__cols-4">
