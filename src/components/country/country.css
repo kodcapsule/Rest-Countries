@@ -100,21 +100,23 @@
 /*================ Start of Country Details ===================*/
 
 .country_detail {
+  width: 100%;
   display: flex;
   margin-top: 8rem;
+  gap: 8rem;
   /* background: blue; */
 }
 
-.country_detail .flag__container {
-  width: 48%;
-  border-radius: 0rem;
+.country_detail img {
+  width: 50%;
 }
 
 .country__detail_content {
+  width: 45%;
   display: flex;
   flex-direction: column;
   margin-top: 6rem;
-  margin-left: 10rem;
+  /* background: green; */
 }
 
 .country__detail_content h2 {
@@ -124,7 +126,7 @@
 }
 
 .content {
-  column-gap: 10rem;
+  column-gap: 6rem;
   font-size: 2rem;
   font-weight: 600;
   color: var(--very-dark-blue);
