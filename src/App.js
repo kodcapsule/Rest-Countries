@@ -18,7 +18,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Rootlayout />}>
       <Route index element={<Home />} />
       <Route path="country" element={<CountryDetailsLayout />}>
-        <Route path="name" element={<CountryDetail />} />
+        <Route path="name" element={<CountryDetail countryData="name" />} />
       </Route>
     </Route>
   )

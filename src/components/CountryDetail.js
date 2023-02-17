@@ -1,6 +1,6 @@
 import React from "react";
 
-const CountryDetail = () => {
+const CountryDetail = ({ countryData }) => {
   return (
     <article className="country_detail">
       <div className="flag__container">
@@ -10,7 +10,7 @@ const CountryDetail = () => {
         <h2>ghana</h2>
         <div className="content grid__container grid__cols-2">
           <p>
-            Population : <span>100,000,000,000</span>
+            Population : <span>{countryData}</span>
           </p>
           <p>
             Region : <span>Region Name</span>
