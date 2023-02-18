@@ -11,15 +11,12 @@ import CountryDetail from "./pages/CountryDetails";
 
 // Layouts
 import Rootlayout from "./layouts/Rootlayout";
-import CountryDetailsLayout from "./layouts/CountryDetailsLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Rootlayout />}>
       <Route index element={<Home />} />
-      <Route path="country" element={<CountryDetailsLayout />}>
-        <Route path="name" element={<CountryDetail countryData="name" />} />
-      </Route>
+      <Route path="country" element={<CountryDetail />} />
     </Route>
   )
 );
