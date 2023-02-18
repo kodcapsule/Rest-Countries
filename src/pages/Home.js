@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useLoaderData } from "react-router-dom";
 import axios from "axios";
-import ScaleLoader from "react-spinners/ScaleLoader";
+
 import Countrycontainer from "../components/country/Countrycontainer";
 
 import { BiChevronDown } from "react-icons/bi";
@@ -8,22 +8,7 @@ import { BsSearch } from "react-icons/bs";
 import Region from "../components/country/Region";
 
 const Home = () => {
-  const [countries, setCountries] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    getCountriesData();
-  }, []);
-
-  const getCountriesData = async () => {
-    try {
-      const data = await axios.get("https://restcountries.com/v3.1/all");
-      setCountries(data.data);
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+  const countries = useLoaderData();
 
   return (
     <>
@@ -34,7 +19,7 @@ const Home = () => {
         </div>
         <div className="dropdown__list">
           <span>Filter by Region</span>
-          <BiChevronDown className="icon" onClick={getCountriesData} />
+          <BiChevronDown className="icon" />
         </div>
 
         <ul className="list__items hide">
@@ -45,13 +30,6 @@ const Home = () => {
           <Region region="Oceania" />
         </ul>
       </div>
-      {isLoading && (
-        <ScaleLoader
-          color="hsl(207, 26%, 17%)"
-          size="200"
-          className="container loading"
-        />
-      )}
 
       {countries && <Countrycontainer countries={countries} />}
     </>
@@ -59,3 +37,8 @@ const Home = () => {
 };
 
 export default Home;
+
+export const fetchCountriesData = async () => {
+  const data = await axios.get("https://restcountries.com/v3.1/all");
+  return data.data;
+};

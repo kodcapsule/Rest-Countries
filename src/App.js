@@ -9,14 +9,17 @@ import {
 import Home from "./pages/Home";
 import CountryDetail from "./pages/CountryDetails";
 
+import { fetchCountriesData } from "./pages/Home";
+import { fetchCountry } from "./components/CountryDetail";
+
 // Layouts
 import Rootlayout from "./layouts/Rootlayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Rootlayout />}>
-      <Route index element={<Home />} />
-      <Route path="country" element={<CountryDetail />} />
+      <Route index element={<Home />} loader={fetchCountriesData} />
+      <Route path="country" element={<CountryDetail />} loader={fetchCountry} />
     </Route>
   )
 );
