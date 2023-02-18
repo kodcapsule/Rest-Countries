@@ -1,5 +1,4 @@
 import "./country.css";
-
 import { Link } from "react-router-dom";
 
 const Country = ({ countryData }) => {
@@ -10,7 +9,7 @@ const Country = ({ countryData }) => {
           <img src={`${countryData.flags.png}`} alt="" />
         </div>
         <div className="country__content">
-          <Link to="country">
+          <Link to={`${countryData.name.common}`}>
             <h3>{countryData.name.common}</h3>
           </Link>
           <p>

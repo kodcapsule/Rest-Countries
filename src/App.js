@@ -19,7 +19,11 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Rootlayout />}>
       <Route index element={<Home />} loader={fetchCountriesData} />
-      <Route path="country" element={<CountryDetail />} loader={fetchCountry} />
+      <Route
+        path=":country_name"
+        element={<CountryDetail />}
+        loader={fetchCountry}
+      />
     </Route>
   )
 );
