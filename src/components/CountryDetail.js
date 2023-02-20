@@ -50,6 +50,7 @@ const CountryDetail = () => {
 
 export default CountryDetail;
 
+// Loader function
 export const fetchCountry = async ({ params }) => {
   const { country_name } = params;
   const data = await axios.get(

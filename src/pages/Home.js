@@ -1,7 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
-
-import Countrycontainer from "../components/country/Countrycontainer";
+import Country from "../components/country/Country";
 
 import { BiChevronDown } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
@@ -30,14 +29,24 @@ const Home = () => {
           <Region region="Oceania" />
         </ul>
       </div>
-
-      {countries && <Countrycontainer countries={countries} />}
+      <main className="container">
+        {countries && (
+          <div className="main__content grid__container grid__cols-4">
+            {countries.map((country) => {
+              return (
+                <Country countryData={country} key={country.name.common} />
+              );
+            })}
+          </div>
+        )}
+      </main>
     </>
   );
 };
 
 export default Home;
 
+// Loader function
 export const fetchCountriesData = async () => {
   const data = await axios.get("https://restcountries.com/v3.1/all");
   return data.data;
