@@ -5,49 +5,42 @@ const CountryDetail = () => {
   const country = useLoaderData();
   return (
     <article className="country_detail">
-      <img src={`${country.data[0].flags.png}`} alt="country flag" />
-
+      <img src={`${country.flags.png}`} alt="country flag" />
       <div className="country__detail_content">
-        <h2>{country.data[0].name.common}</h2>
+        <h2>{country.name.common}</h2>
         <div className="content grid__container grid__cols-2">
           <p>
-            Population : <span>100,000,000,000,000</span>
+            Native Name : <span>{country.name.common}</span>
           </p>
           <p>
-            Region : <span>{country.data[0].region}</span>
+            Population : <span>{country.population.toLocaleString()}</span>
           </p>
           <p>
-            Capital : <span>{country.data[0].capital}</span>
+            Region : <span>{country.region}</span>
           </p>
           <p>
-            Capital : <span>City</span>
+            Sub region : <span>{country.subregion}</span>
           </p>
           <p>
-            Capital : <span>City</span>
+            Capital : <span>{country.capital}</span>
           </p>
           <p>
-            Capital : <span>100,000,000,000</span>
+            Currency :{" "}
+            <span>
+              {Object.values(Object.values(country.currencies)[0])[0]}
+            </span>
           </p>
           <p>
-            Capital : <span>City</span>
-          </p>
-          <p>
-            Capital : <span>City</span>
-          </p>
-          <p>
-            Capital : <span>City</span>
-          </p>
-          <p>
-            Capital : <span>City</span>
+            Languages : <span>{Object.values(country.languages)[0]}</span>
           </p>
         </div>
         <div className="border__countries">
           <span> Border countries:</span>
-
           <ul>
-            <li>Togo</li>
-            <li>Togo</li>
-            <li>Togo</li>
+            {country.borders &&
+              country.borders.map((border) => {
+                return <li key={border}>{border}</li>;
+              })}
           </ul>
         </div>
       </div>
@@ -62,5 +55,7 @@ export const fetchCountry = async ({ params }) => {
   const data = await axios.get(
     `https://restcountries.com/v3.1/name/${country_name}`
   );
-  return data;
+
+  // console.log(Object.values(Object.values(data.data[0].currencies)[0])[0]);
+  return data.data[0];
 };
