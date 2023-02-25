@@ -57,6 +57,6 @@ export const fetchCountry = async ({ params }) => {
     `https://restcountries.com/v3.1/name/${country_name}`
   );
 
-  // console.log(Object.values(Object.values(data.data[0].currencies)[0])[0]);
+  console.log(data.data[0]);
   return data.data[0];
 };
