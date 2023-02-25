@@ -16,21 +16,9 @@
   color: var(--dark-gray);
 }
 
-.dropdown__list {
-  position: relative;
-}
-
-.list__items {
-  position: absolute;
-  flex-direction: column;
-  top: 19%;
-  right: 3%;
-  align-items: flex-start;
-}
-
 .region {
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 0.3rem 7rem 0.3rem 0.3rem;
   transition: var(--transition-primary);
 }
@@ -48,7 +36,24 @@
 
 .main__content {
   gap: 6rem;
-  height: 100vh;
+}
+.filter__region {
+  position: relative;
+}
+
+.region_container {
+  width: 100%;
+  position: absolute;
+  margin-top: 1rem;
+  background: var(--white);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--primary-box-shadow);
+  padding: 1rem;
+  z-index: 10;
+}
+
+.region_container.hide {
+  display: none;
 }
 /*================ Start of country component ===================*/
 

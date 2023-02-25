@@ -3,18 +3,17 @@ import { useLoaderData } from "react-router-dom";
 import axios from "axios";
 import Country from "../components/country/Country";
 
-import { BiChevronDown } from "react-icons/bi";
-import { BsSearch } from "react-icons/bs";
+import Search from "../components/Search";
+import FilterRegion from "../components/FilterRegion";
 import Region from "../components/country/Region";
 
 const Home = () => {
   const countries = useLoaderData();
   const [countryName, setCountryName] = useState(countries);
+  const [toggle, setToggle] = useState(false);
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log(e.target.value);
-
     if (e.target.value) {
       setCountryName(
         countryName.filter((country) => {
@@ -26,38 +25,34 @@ const Home = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    setCountryName(
-      countryName.filter((country) => {
-        return country.name.common.toLowerCase().includes(e.target.value);
-      })
-    );
+    const country = countryName.filter((country) => {
+      return country.name.common.toLowerCase().includes("fr");
+    });
 
-    console.log(countryName);
+    console.log(country);
+    setCountryName(country);
+  };
+
+  const handleHide = (e) => {
+    setToggle(!toggle);
   };
 
   return (
     <>
       <div className="container top__container">
-        <div className="search__input">
-          <BsSearch className="icon" onClick={handleClick} />
-          <input
-            type="search"
-            placeholder="Search for a country..."
-            onChange={handleSearch}
-          />
+        <Search handleClick={handleClick} handleSearch={handleSearch} />
+        <div className="filter__region">
+          <FilterRegion handleHide={handleHide} />
+          {toggle && (
+            <div className="region_container  ">
+              <Region region="Africa" />
+              <Region region="Americas" />
+              <Region region="Asia" />
+              <Region region="Europe" />
+              <Region region="Oceania" />
+            </div>
+          )}
         </div>
-        <div className="dropdown__list">
-          <span>Filter by Region</span>
-          <BiChevronDown className="icon" />
-        </div>
-
-        <ul className="list__items hide">
-          <Region region="Africa" />
-          <Region region="America" />
-          <Region region="Asia" />
-          <Region region="Europe" />
-          <Region region="Oceania" />
-        </ul>
       </div>
       <main className="container">
         {countries && (
