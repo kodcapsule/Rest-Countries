@@ -12,6 +12,7 @@ const Home = () => {
   const [countryName, setCountryName] = useState(countries);
   const [toggle, setToggle] = useState(false);
 
+  // Search country by name
   const handleSearch = (e) => {
     e.preventDefault();
     if (e.target.value) {
@@ -23,6 +24,7 @@ const Home = () => {
     } else if (e.target.value === "") setCountryName(countries);
   };
 
+  // Search country by name using search button
   const handleClick = (e) => {
     e.preventDefault();
     const country = countryName.filter((country) => {
@@ -31,10 +33,12 @@ const Home = () => {
     setCountryName(country);
   };
 
+  //Hide Region search
   const handleHide = (e) => {
     setToggle(!toggle);
   };
 
+  // Search countries by region
   const searchByRegion = (region) => {
     setCountryName(countries);
     setCountryName(
@@ -42,10 +46,7 @@ const Home = () => {
         return country.region.toLowerCase().includes(`${region}`);
       })
     );
-
     setToggle(!toggle);
-
-    console.log(countryName[0].region);
   };
 
   return (
