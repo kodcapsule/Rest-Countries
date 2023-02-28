@@ -52,9 +52,6 @@
   z-index: 10;
 }
 
-.region_container.hide {
-  display: none;
-}
 /*================ Start of country component ===================*/
 
 .country {

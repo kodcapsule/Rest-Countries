@@ -28,13 +28,21 @@ const Home = () => {
     const country = countryName.filter((country) => {
       return country.name.common.toLowerCase().includes("fr");
     });
-
-    console.log(country);
     setCountryName(country);
   };
 
   const handleHide = (e) => {
     setToggle(!toggle);
+  };
+
+  const searchByRegion = (region) => {
+    setCountryName(
+      countryName.filter((country) => {
+        return country.region.toLowerCase().includes("Africa");
+      })
+    );
+
+    console.log(countryName);
   };
 
   return (
