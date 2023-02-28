@@ -36,13 +36,16 @@ const Home = () => {
   };
 
   const searchByRegion = (region) => {
+    setCountryName(countries);
     setCountryName(
-      countryName.filter((country) => {
-        return country.region.toLowerCase().includes("Africa");
+      countries.filter((country) => {
+        return country.region.toLowerCase().includes(`${region}`);
       })
     );
 
-    console.log(countryName);
+    setToggle(!toggle);
+
+    console.log(countryName[0].region);
   };
 
   return (
@@ -53,11 +56,17 @@ const Home = () => {
           <FilterRegion handleHide={handleHide} />
           {toggle && (
             <div className="region_container  ">
-              <Region region="Africa" />
-              <Region region="Americas" />
-              <Region region="Asia" />
-              <Region region="Europe" />
-              <Region region="Oceania" />
+              <Region region="Africa" search={() => searchByRegion("africa")} />
+              <Region
+                region="Americas"
+                search={() => searchByRegion("americas")}
+              />
+              <Region region="Asia" search={() => searchByRegion("asia")} />
+              <Region region="Europe" search={() => searchByRegion("europe")} />
+              <Region
+                region="Oceania"
+                search={() => searchByRegion("oceania")}
+              />
             </div>
           )}
         </div>

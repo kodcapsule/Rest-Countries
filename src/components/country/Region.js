@@ -1,7 +1,11 @@
 import React from "react";
 
-const Region = ({ region }) => {
-  return <li className="region">{region}</li>;
+const Region = ({ region, search }) => {
+  return (
+    <li className="region" onClick={search}>
+      {region}
+    </li>
+  );
 };
 
 export default Region;
