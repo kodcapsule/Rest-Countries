@@ -105,10 +105,42 @@ body {
   font-size: 3rem;
 }
 
-.loading {
+/* .loading {
   text-align: center;
   margin-top: 20rem;
+} */
+
+/* THEME */
+
+#light {
+  background: var(--very-light-gray);
 }
+#dark {
+  background: var(--v-dark-blue);
+}
+
+#dark .search__input,
+#dark .dropdown__list,
+#dark .list__items,
+#dark .back,
+#dark .border__countries ul li {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+#light .search__input,
+#light .dropdown__list,
+#light .list__items,
+#light .back,
+#light .border__countries ul li {
+  background-color: var(--very-light-gray);
+}
+
+#dark .back span {
+  color: var(--white);
+}
+
+/* ======================== */
 @media screen and (max-width: 120rem) {
   html {
     font-size: 55.5%;

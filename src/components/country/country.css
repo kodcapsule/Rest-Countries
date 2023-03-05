@@ -16,6 +16,9 @@
   color: var(--dark-gray);
 }
 
+#dark .search__input input {
+  color: var(--white);
+}
 .region {
   width: 100%;
   font-size: 2rem;
@@ -95,6 +98,22 @@
 
 .country__content span {
   color: var(--dark-gray);
+}
+
+#dark .country,
+#dark .region_container {
+  background-color: var(--dark-blue);
+}
+
+#dark .country__content h3,
+#dark .country__content p,
+#dark .country__content span,
+#dark .region_container {
+  color: var(--white);
+}
+
+#light .country {
+  background-color: var(--very-light-gray);
 }
 
 /*================ End of country component ===================*/

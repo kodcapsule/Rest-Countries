@@ -42,6 +42,15 @@ header {
   gap: 0.5rem;
 }
 
-.theme .light {
+/* .theme .light {
   display: none;
+} */
+
+#dark header {
+  background-color: var(--dark-blue);
+}
+
+#dark .navbar__container h1,
+#dark button {
+  color: var(--white);
 }

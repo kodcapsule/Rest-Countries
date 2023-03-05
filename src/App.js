@@ -1,3 +1,4 @@
+import { createContext, useState } from "react";
 import {
   createBrowserRouter,
   Route,
@@ -15,6 +16,8 @@ import { fetchCountry } from "./components/CountryDetail";
 // Layouts
 import Rootlayout from "./layouts/Rootlayout";
 
+export const ThemeContext = createContext(null);
+// Routing  of  website
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Rootlayout />}>
@@ -29,7 +32,18 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  const [theme, setTheme] = useState("light");
+
+  const themeToggle = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+  return (
+    <ThemeContext.Provider value={{ theme, themeToggle }}>
+      <div id={theme}>
+        <RouterProvider router={router} />;
+      </div>
+    </ThemeContext.Provider>
+  );
 }
 
 export default App;
