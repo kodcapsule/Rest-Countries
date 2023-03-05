@@ -16,7 +16,9 @@
   color: var(--dark-gray);
 }
 
-#dark .search__input input {
+#dark .search__input input,
+#dark .search__input input::placeholder,
+#dark .search__input input::-webkit-search-cancel-button {
   color: var(--white);
 }
 .region {

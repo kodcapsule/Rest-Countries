@@ -31,7 +31,7 @@
   --border-radius-circle: 50%;
 
   /* ========== BOX SHADOWS ============ */
-  --primary-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  --primary-box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
 html {
