@@ -120,6 +120,10 @@ body {
   background: var(--v-dark-blue);
 }
 
+#dark body {
+  background: var(--v-dark-blue) !important;
+}
+
 #dark .search__input,
 #dark .dropdown__list,
 #dark .list__items,

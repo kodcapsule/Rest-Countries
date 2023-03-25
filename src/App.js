@@ -10,6 +10,8 @@ import {
 import Home from "./pages/Home";
 import CountryDetail from "./pages/CountryDetails";
 
+import Error from "./pages/Error";
+
 import { fetchCountriesData } from "./pages/Home";
 import { fetchCountry } from "./components/CountryDetail";
 
@@ -20,7 +22,7 @@ export const ThemeContext = createContext(null);
 // Routing  of  website
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Rootlayout />}>
+    <Route path="/" element={<Rootlayout />} errorElement={<Error />}>
       <Route index element={<Home />} loader={fetchCountriesData} />
       <Route
         path=":country_name"
