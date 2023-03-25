@@ -106,11 +106,6 @@ body {
   font-size: 3rem;
 }
 
-/* .loading {
-  text-align: center;
-  margin-top: 20rem;
-} */
-
 /* THEME */
 
 #light {
@@ -166,8 +161,59 @@ body {
 }
 
 @media screen and (max-width: 65rem) {
+  html {
+    font-size: 38.5%;
+  }
   .main__content {
     gap: 6rem;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar__container {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 65rem) {
+  html {
+    font-size: 38.5%;
+  }
+  .main__content {
+    gap: 6rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container {
+    margin: 0 5rem;
+  }
+
+  .country_detail {
+    flex-direction: column;
+  }
+
+  .country_detail img {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 38rem) {
+  .main__content {
+    gap: 6rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .top__container {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+  }
+
+  .search__input,
+  .filter__region {
+    margin-left: -15rem;
+  }
+
+  .container {
+    margin: 0 5rem;
   }
 }

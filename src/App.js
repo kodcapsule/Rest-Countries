@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import CountryDetail from "./pages/CountryDetails";
 
 import Error from "./pages/Error";
+import CountryError from "./pages/CountryError";
 
 import { fetchCountriesData } from "./pages/Home";
 import { fetchCountry } from "./components/CountryDetail";
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
         path=":country_name"
         element={<CountryDetail />}
         loader={fetchCountry}
+        errorElement={<CountryError />}
       />
     </Route>
   )

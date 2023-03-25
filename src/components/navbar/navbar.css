@@ -42,10 +42,6 @@ header {
   gap: 0.5rem;
 }
 
-/* .theme .light {
-  display: none;
-} */
-
 #dark header {
   background-color: var(--dark-blue);
 }
