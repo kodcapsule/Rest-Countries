@@ -180,4 +180,17 @@
   padding: 0.5rem 3rem;
 }
 
+#dark .country__detail_content h2,
+#dark .content,
+#dark .border__countries {
+  color: var(--light-dark-gray);
+}
+
+#dark .content span {
+  color: var(--light-gray);
+}
+
+#dark .border__countries {
+  color: var(--light-gray);
+}
 /*================ End of Country Details ===================*/

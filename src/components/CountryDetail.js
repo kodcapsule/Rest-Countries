@@ -25,7 +25,7 @@ const CountryDetail = () => {
             Capital : <span>{country.capital}</span>
           </p>
           <p>
-            Currency :{" "}
+            Currency :
             <span>
               {Object.values(Object.values(country.currencies)[0])[0]}
             </span>

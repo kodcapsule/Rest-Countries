@@ -15,8 +15,9 @@
   --dark-blue: hsl(209, 23%, 22%);
   --v-dark-blue: hsl(207, 26%, 17%);
   --very-dark-blue: hsl(200, 15%, 8%);
+  --light-gray: #ced0d2;
   --dark-gray: hsl(0, 0%, 52%);
-  --light-gray: #e9ecef;
+  --light-dark-gray: #e9ecef;
   --very-light-gray: hsl(0, 0%, 98%);
   --white: hsl(0, 0%, 100%);
 
@@ -137,7 +138,7 @@ body {
 }
 
 #dark .back span {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 /* ======================== */
