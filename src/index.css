@@ -216,4 +216,13 @@ body {
   .container {
     margin: 0 5rem;
   }
+
+  .navbar__container {
+    margin: 0;
+    justify-content: space-around !important;
+  }
+  .navbar__container a h1,
+  .theme span {
+    font-size: 2rem;
+  }
 }
