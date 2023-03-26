@@ -201,20 +201,18 @@ body {
     gap: 6rem;
     grid-template-columns: repeat(1, 1fr);
   }
-
+  .container {
+    margin: 0 5rem;
+  }
   .top__container {
     flex-direction: column;
     gap: 2rem;
-    margin: 0;
+    margin: 0 5rem;
   }
 
   .search__input,
   .filter__region {
-    margin-left: -15rem;
-  }
-
-  .container {
-    margin: 0 5rem;
+    width: 100% !important;
   }
 
   .navbar__container {
